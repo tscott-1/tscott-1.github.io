@@ -5,7 +5,7 @@
     --action: #27B7CE;
     --action-alt: #15616D;
     --base-light: #ffecd1;
-    --white: rgb(234, 226, 226);
+    --white: #eae2e2;
     --base: #0d0711;
     --black: #111111;
   }
@@ -16,7 +16,7 @@
      box-sizing: border-box;
      font-size: 16px;
      font-family: Helvetica, Arial, sans-serif;
-     color: var(--black);
+     color: var(--base-light);
      scroll-behavior: smooth;
    }
    
@@ -28,7 +28,7 @@
    
    h1 {
     color: var(--brand)
-   },
+   }
    h2,
    h3,
    h4,
@@ -68,3 +68,15 @@
      font: inherit;
    }
  
+
+ /* Components */
+
+/* header */
+header {
+  border: 1px solid red;
+}
+ .header_logo {
+  max-width: 5%;
+  height: 6px;
+ }
+
