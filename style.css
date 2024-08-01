@@ -1,13 +1,14 @@
 
 :root {
-    --brand: #78290F;
-    --brand-alt: #ffa300;
+    --brand: #15616D;
+    --action: #78290F;
+    --brand-comp: #ffa300;
     --action: #27B7CE;
-    --action-alt: #15616D;
     --base-light: #ffecd1;
     --white: #eae2e2;
-    --base: #0d0711;
+    --base: #ffecd1;
     --black: #111111;
+    --text: #001524;
   }
  
   /* CSS Reset */
@@ -16,7 +17,7 @@
      box-sizing: border-box;
      font-size: 16px;
      font-family: Helvetica, Arial, sans-serif;
-     color: var(--base-light);
+     color: var(--text);
      scroll-behavior: smooth;
    }
    
@@ -74,9 +75,44 @@
 /* header */
 header {
   border: 1px solid red;
+  background-color: var(--brand);
+  border-radius: 10px;
 }
- .header_logo {
+header.header_logo {
   max-width: 5%;
   height: 6px;
  }
 
+header.headernav {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* hero */
+
+.hero {
+  background-color: var(--base);
+  padding: 56px 16px;
+  border-radius: 10px;
+  margin: 5px 10px;
+}
+
+.hero img {
+  border-radius: 0 50% 50% 50%;
+}
+
+ @media (min-width: 10000px) {
+  p {
+      font-size: x-large;
+  }
+}
+
+@media not screen {
+  body {
+      background-color: white;
+  }
+
+  h1, h2, p {
+      color: black;
+  }
+}
