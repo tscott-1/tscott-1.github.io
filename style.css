@@ -80,7 +80,24 @@
  /* Components */
 
     /* btn-primary */
- .btn-primary {
+button {
+  padding: 12px 16px;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--base-light);
+  border-radius: 4px;
+  background-color: var(--brand);
+  transition: all 0.3s ease;
+  margin: 3px;
+}
+
+button:hover {
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  background-color: var(--action)
+}
+
+.btn-primary:hover {
   padding: 12px 16px;
   display: inline-block;
   text-decoration: none;
@@ -197,7 +214,7 @@ header .headernav ul  {
   color: var(--base);
 
 }
-.hero1 img {
+.hero img {
   border-radius: 0 50% 50% 50%;
   border: 3px solid var(--brand);
   padding: 2px;
@@ -292,23 +309,25 @@ header .headernav ul  {
 /* features */
 .featureblock {
   position: relative;
-  max-height: 300px;
-  max-width: 400%; 
+  /* max-height: 300px; */
+  /* max-width: 400%;  */
   text-align: center;
   background: var(--base);
   display: block;
   border: 1px solid red;
   background-color: var(--brand);
   border-radius: 10px;
+  flex: 1;
 }
 .featureblock img{
   height: 100%;
+  width: 100%;
   opacity: 0.6;
-  /* object-fit: none; */
+  object-fit: cover;
 
 }
 
-.featureblock img :hover{
+.featureblock img:hover{
   height: 100%;
   opacity: 1;
   /* object-fit: none; */
@@ -331,28 +350,22 @@ header .headernav ul  {
   border-radius: 10px;
   text-align: center; 
   display: flex; 
-  flex-wrap: wrap;
-  flex-direction: row;
-  border: 1px solid greenyellow;
+  flex-direction: column;
+  border: 1px solid red;
   background: var(--base);
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  gap: 10px;
+  padding: 10px;
   /* max-height: 100px; */
 }
 
 @media (min-width: 768px) {
-  .featureblock{
-    max-width: calc(100%/3 - 100px);
-   
-  }
+
 
 
   .features {
-    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    padding: 15px 2px;
-    border-radius: 10px;
-    margin: 5px 2px;
+    
   }
 
 }
@@ -360,73 +373,79 @@ header .headernav ul  {
 /* footer */
 footer {
 padding: 16px;
-text-align: center;
 display: flex;
 flex-wrap: wrap;
 flex-direction: row;
-justify-content: space-around;
+justify-content: space-between;
+background-color: var(--base);
 }
 
 
-    /* .contact-form */
-    .contact-form {
-      padding: 48px 16px;
-      border-radius: 10px;
-      margin: 5px 10px;
-    }
-    
-    .contact-form input,
-    .contact-form select {
-      display: block;
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 16px;
-    }
-    
-    .contact-form textarea {
-      display: block;
-      width: 100%;
-      padding: 8px;
-    }
-    
-    .contact-form label {
-      display: block;
-      width: 100%;
-    }
-    
-    .contact-form h2 {
-      color: var(--base-dark);
-      margin-bottom: 16px;
-    }
-    
-    .contact-form input[type="submit"] {
-      background-color: var(--action);
-      border: 0;
-      margin-top: 8px;
-      cursor: pointer;
-    }
-   
-    @media (min-width: 768px) {
-     .contact-form h2 {
-         text-align: center;
-         font-size: 2.5rem;
-     }
-   
-     .contact-form form {
-         max-width: 60%;
-         margin: 40px auto;
-     }
-   }
+/* .contact-form */
+.contact-form {
+  padding: 48px 16px;
+  border-radius: 10px;
+  margin: 5px 10px;
+  background-color: var(--base);
+  
+}
+
+.contact-form input,
+.contact-form select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+
+.contact-form label {
+  display: block;
+  width: 100%;
+}
+
+.contact-form h2 {
+  color: var(--base-dark);
+  margin-bottom: 16px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: var(--action);
+  border: 0;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .contact-form h3 {
+      text-align: center;
+      font-size: 2.5rem;
+  }
+
+  .contact-form form {
+      max-width: 40%;
+      margin: 40px auto;
+      max-height: 350px;
+  }
+}
+
 
     
     .socials-icon {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
+      /* border: 1px solid red; */
     }
    
      @media (min-width: 768px) {
         footer {
-            justify-content: center;
+          align-content: center;
+            
         }
       
         footer .socials-icon {
@@ -436,11 +455,6 @@ justify-content: space-around;
       }
 
 
- @media (min-width: 10000px) {
-  p {
-      font-size: x-large;
-  }
-}
 
 @media not screen {
   body {

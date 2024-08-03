@@ -25,17 +25,23 @@
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#myinfo">About</a>
                 </li>
                 <li>
-                    <a href="https://shecodes.com.au/">Projects</a>
+                    <a href="./project.html">Projects</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="./books.html">Books</a>
+                </li>
+                <li>
+                    <a href="./hikes.html">Hikes</a>
+                </li>
+                <li>
+                    <a href="#contact-form">Contact</a>
                 </li>
             </ul>
         </nav>
-
+<!-- 
         <nav class="mobile-nav display-none">
             <ul>
                 <li>
@@ -51,7 +57,7 @@
                     <a href="#">Contact</a>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
 
 <section class = "hero">
@@ -103,21 +109,21 @@
     </section>
 </section>
 
-<section class = "features">
+<section class="features">
     <div class = "featureblock">
-        <img src="./img/code.jpg">
+        <a href="./project.html"><img src="./img/code.jpg"></a>
         <div class = "textinbox">
             <h2>Projects</h2>
         </div>
     </div>
     <div class = "featureblock">
-        <img src="./img/books.jpg">
+        <a href="./books.html"><img src="./img/books.jpg"></a>
         <div class = "textinbox">
             <h2>Books</h2>
         </div>
     </div>
     <div class = "featureblock">
-        <img src="./img/hike.jpg">
+        <a href="./hikes.html"><img src="./img/hike.jpg"></a>
         <div class = "textinbox">
             <h2>Hikes</h2>
         </div>
@@ -125,32 +131,26 @@
 </section>
 
 
-    <section class = "contact-form">
-        <h3>Contact me</h3>
-        <form>
-            <label for="your-name">Your Name</label>
-            <input type="text" id="your-name">
-            <label for="email">Email</label>
-            <input type="email" id="your-email">
-            <label for="message">Your Message</label>
-           <textarea name="message-text" id="message" rows="10"></textarea>
-           <input type="submit" value="Submit">
-        </form>
-    </section>
+<section id="contact-form" class = "contact-form">
+    <h3>Contact me</h3>
+    <form action="https://formspree.io/f/xpwadobo" method="POST">
+        <label for="your-name">Your Name</label>
+        <input type="text" id="your-name" name="your-name">
+        <label for="email">Email</label>
+        <input type="email" id="your-email" name="your-email">
+        <label for="message">Your Message</label>
+        <textarea name="message-text" id="message" rows="10" name="your-email"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
 <footer>
+    <p>&copy; 2024 Tenille Scott</p>
     <section class = "socials">
-        <a href="https://www.instagram.com/shecodesaus/" title="@shecodes on Instagram">
-            <img class="socials-icon" src="./img/instagram.svg"
-                alt="The Instagram logo: a rounded square camera with a purple-orange gradient filling the lines" />
-        </a>
-        <a
-            href="https://join.slack.com/t/shecodesaus/shared_invite/enQtNzQ3ODk1OTQzODc3LTQ2ZWFmNzM0NjE1MjA0NTI3YjJkMWMyYWVjMDU3ZThhODJmMTk4YmRjZGMzZDRhZDBhODQwNzdlYmJhNDg1YjE">
-            <img class="socials-icon" src="./img/slack.svg" alt="The Slack logo: a colourful deconstructed hashtag" />
-        </a>
-        <a href="https://github.com/SheCodesAus/">
-            <img class="socials-icon" src="./img/github.svg"
-                alt="The Github logo: a black circle with the silhouette of a white cat, with one tentacle arm" />
-        </a>
+
+        <a href="https://www.linkedin.com/in/tenille-scott-b4241a30"><img class="socials-icon" src="./img/317750_linkedin_icon.png"alt="The linkedin logo: white in text on a blue circle"/></a>
+        <a href="https://shecodesaus.slack.com/team/U074JDNLQ6T"><img class="socials-icon" src="./img/slack.svg" alt="The Slack logo: a colourful deconstructed hashtag"></a>
+        <a href="https://github.com/tscott-1"><img class="socials-icon" src="./img/github.svg" alt="The Github logo: a black circle with the silhouette of a white cat, with one tentacle arm"/></a>
     </section>
 </footer>
 
