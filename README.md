@@ -1,12 +1,12 @@
-#  your_name_here - Portfolio Task
+#  Tenille Scott - Portfolio Task
 ​
-[My portfolio site] https://tscott-1.github.io/
+https://tscott-1.github.io/
 ​
 ## Project Requirements
 
 ### Content
  Add a short paragraph describing the features below. What aesthetic and technical choices did you make? 
-- [ ] At least one profile picture
+- [x] At least one profile picture
 - [ ] Biography (at least 100 words)
 - [ ] Functional Contact Form
 - [ ] "Projects" section
@@ -19,6 +19,8 @@
 - [ ] Deployed on GitHub pages.
 - [ ] Implements responsive design principles.
 - [ ] Uses semantic HTML.
+
+My project has a landing page with a profile picture, a short biography and a list of my skills. An additional page has been added to showcase current and future projects, and I have also added in placeholder links from the landing page for a 'books' and a 'hikes' page where I would like to showcase books I have read and hikes I have done in future.  In both the landing page and the projects page, I have put in a header menu allowing users to navigate to my information or the contact form on the header page, the projects page, and in future the additional hikes and books pages.  
 
 ### Bonus (optional)
  Add a short paragraph describing the features below, if you included any. 
