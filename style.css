@@ -114,6 +114,10 @@ header button {
   color: var(--base)
 }
 
+header button:hover {
+  background-color: var(--action);
+}
+
 .headernav ul  {
   display: none;
 }
@@ -133,6 +137,10 @@ header button {
       background-color: var(--brand);
       gap: 24px;
       margin-right: 16px;
+  }
+
+  header .headernav li:hover {
+    background-color: var(--action);
   }
 
   header .mobile-header .hamburger-icon {
