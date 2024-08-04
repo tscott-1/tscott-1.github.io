@@ -357,35 +357,49 @@ header button {
 
 .featurecontent {
   margin: 5px 10px;
+  padding: 10px;
   border-radius: 10px;
   text-align: center; 
   display: flex; 
   flex-direction: column;
-  border: 1px solid red;
   background: var(--base);
-  /* justify-content: space-around; */
   gap: 10px;
-  padding: 10px;
-  /* max-height: 100px; */
+}
+
+
+.projectlink{
+  margin: 20px 20px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center; 
+  color: var(--brand);
+  background-color: var(--base);
 }
 
 .contentblock{
-  height: 100%;
-  width: 100%;
   background-color: var(--brand);
   color: var(--base);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.contentblock p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
 }
 
 @media (min-width: 768px) {
-
-
-
   .featurecontent {
-    flex-direction: row;
-    
+    flex-wrap: wrap;
+    flex-direction: row; 
+  }
+ .contentblock{
+  width: calc(100%/2 - 10px);
   }
 
-}
+} 
+
 
 /* footer */
 footer {
