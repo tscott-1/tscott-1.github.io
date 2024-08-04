@@ -376,6 +376,10 @@ header button {
   background-color: var(--base);
 }
 
+.projectlink:hover{
+  background-color: var(--action)
+}
+
 .contentblock{
   background-color: var(--brand);
   color: var(--base);
