@@ -1,15 +1,15 @@
 
 :root {
-    --brand: #15616D;
-    --brand-alt: #78290F;
-    --brand-comp: #ffa300;
-    --action: #27B7CE;
-    --base-light: #ffecd1;
-    --white: #eae2e2;
-    --base: #ffecd1;
-    --black: #111111;
-    --text: #001524;
-  }
+  --brand: #15616D;
+  --brand-alt: #78290F;
+  --brand-comp: #ffa300;
+  --action: #27B7CE;
+  --base-light: #f7f3eb;  
+  --white: #eae2e2;
+  --base: #f7f3eb;  
+  --black: #111111;
+  --text: #001524;
+}
  
   /* CSS Reset */
  
@@ -187,8 +187,6 @@ header button:hover {
   /* border: 1px solid greenyellow; */
   background-color: var(--base);
   padding: 56px 16px;
-  border-radius: 10px;
-  margin: 5px 10px;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
@@ -229,43 +227,84 @@ header button:hover {
 }
 
 .myskills {
+  padding: 15px;
   border: 3px solid var(--brand-alt);
   background-color: var(--base);
-  padding: 16px 16px;
   border-radius: 10px;
   margin: 5px 10px;
 }
 
-.myskills ul{
-  /* list-style: circle;
-  margin: 5px 10px; */
-  list-style: none;
-
-}
-.myskills li{
-  display: inline-block;
-  margin-right: 10px; /* add spacing between items */
-  
+.myskills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;  /* Reduced gap */
+  justify-content: flex-start;  /* Changed to flex-start for better flow */
+  margin: 0 auto;
 }
 
+.myskills li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Using a minimum width instead of percentage for more fluid layout */
+  min-width: 70px;  /* Reduced minimum width */
+  max-width: 90px;  /* Added maximum width */
+  flex: 1;          /* Allow items to grow */
+  padding: 1px;     /* Reduced padding */
+  transition: transform 0.3s ease;
+}
+
+.myskills li:hover {
+  transform: translateY(-3px);
+}
+
+.skill-icon {
+  width: 28px;      /* Slightly reduced icon size */
+  height: 28px;
+  object-fit: contain;
+  margin-bottom: 4px;  /* Reduced margin */
+}
+
+.myskills span {
+  font-size: 0.85rem;  /* Slightly smaller font */
+  color: var(--text);
+  text-align: center;
+  line-height: 1.1;    /* Tighter line height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .myskills li {
+      min-width: 80px;  /* Slightly larger on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .myskills li {
+      min-width: 90px;  /* Larger on small screens */
+  }
+}
 
 @media (min-width: 768px) {
   .hero2{
-    max-width: calc(2*100%/3);
+    flex: 2;
+    margin: 1% 5% 1% 1%;
     
   }
  .hero1{
-    max-width: calc(100%/3);
+    flex: 1;
+    margin: 1% 1% 1% 5%;
     /* border: 1px solid red; */
   }
 
   .hero {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 15px 2px;
     border-radius: 10px;
     margin: 5px 2px;
+    align-items: stretch;
   }
 
 }
