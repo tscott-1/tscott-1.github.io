@@ -463,19 +463,18 @@ header button:hover {
   border-radius: 10px;
   margin: 5px 10px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: flex-start;
-  max-height: 400px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .featurehero h1{
   font-size: xx-large;
-  text-align: left;
-  padding: 30px;
+  text-align: center;
+  padding: 15px;
   color: var(--brand);
   /* border: 1px solid red; */
-  flex-grow: 3;
+  order: 2;
 
 }
 .featurehero img {
@@ -484,9 +483,30 @@ header button:hover {
   padding: 2px;
   max-width: 100%;
   height: auto;
-  max-height: 400px
+  max-height: 400px;
+  order: 1;
 }
 
+/* Desktop styles */
+@media (min-width: 768px) {
+  .featurehero {
+    flex-direction: row;     /* Horizontal layout on desktop */
+    justify-content: space-between;
+    align-content: flex-start;
+    max-height: 400px;
+  }
+
+  .featurehero h1 {
+    text-align: left;        /* Left align text on desktop */
+    padding: 30px;
+    flex-grow: 3;
+    order: unset;           /* Reset order for desktop */
+  }
+
+  .featurehero img {
+    order: unset;           /* Reset order for desktop */
+  }
+}
 
 .featurecontent {
   margin: 5px 10px;
