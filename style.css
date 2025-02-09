@@ -118,10 +118,85 @@ header button:hover {
   background-color: var(--action);
 }
 
-.headernav ul  {
-  display: none;
+/* Mobile Navigation */
+.headernav {
+  position: fixed;
+  top: 0;
+  right: -100%;  /* Start off-screen */
+  width: 70%;    /* Take up 70% of screen width */
+  height: 100vh;
+  background-color: var(--brand);
+  transition: right 0.3s ease;
+  z-index: 1000;
 }
 
+.headernav.active {
+  right: 0;      /* Slide in from right */
+}
+
+/* Style the mobile menu items */
+.headernav ul {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;  /* Space for the header */
+}
+
+.headernav li {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--base);
+}
+
+.headernav a {
+  color: var(--base);
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+}
+
+/* Overlay when menu is open */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+/* Keep the header above the overlay */
+.mobile-header {
+  position: relative;
+  z-index: 1001;
+}
+
+/* Maintain desktop styles */
+@media (min-width: 768px) {
+  .headernav {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+  }
+
+  .headernav ul {
+    padding-top: 0;
+  }
+
+  .headernav li {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .menu-overlay {
+    display: none !important;
+  }
+}
 
  @media (min-width: 768px) {
   header {
